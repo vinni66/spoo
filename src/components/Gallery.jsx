@@ -2,12 +2,10 @@ import { useState } from 'react';
 
 /* ===== Photo Gallery with Lightbox ===== */
 const photos = [
-  { src: '/assets/images/memory1.png', caption: 'My favorite smile 💕', polaroid: true },
-  { src: '/assets/images/memory2.png', caption: 'Cute as always ✨', polaroid: false },
-  { src: '/assets/images/memory3.png', caption: 'This moment >>>', polaroid: true },
-  { src: '/assets/images/hero-bg.png', caption: 'Us, always 💖', polaroid: false },
-  { src: '/assets/images/cake.png', caption: 'Sweet like you 🎂', polaroid: false },
-  { src: '/assets/images/love-letter.png', caption: 'Every word, for you ✨', polaroid: true },
+  { src: '/assets/images/first-meet.jpg', caption: 'Where it all began 👀', polaroid: true },
+  { src: '/assets/images/first-selfie.jpg', caption: 'Our first selfie 💕', polaroid: false },
+  { src: '/assets/images/holding-hands.jpg', caption: 'First time holding your hand 🤝', polaroid: true },
+  { src: '/assets/images/together.png', caption: 'Us, always 💖', polaroid: false },
 ];
 
 export default function Gallery() {

@@ -4,9 +4,10 @@ import { useRef } from 'react';
 export default function Hero() {
   const carouselRef = useRef(null);
   const images = [
-    { src: '/assets/images/memory1.png', alt: 'Memory 1' },
-    { src: '/assets/images/memory2.png', alt: 'Memory 2' },
-    { src: '/assets/images/memory3.png', alt: 'Memory 3' },
+    { src: '/assets/images/first-meet.jpg', alt: 'Our first meet' },
+    { src: '/assets/images/first-selfie.jpg', alt: 'Our first selfie' },
+    { src: '/assets/images/holding-hands.jpg', alt: 'Holding hands' },
+    { src: '/assets/images/together.png', alt: 'Together' },
   ];
 
   return (
