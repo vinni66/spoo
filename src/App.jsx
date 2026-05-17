@@ -9,7 +9,10 @@ import Gallery from './components/Gallery';
 import LoveLetter from './components/LoveLetter';
 import MoodMessages from './components/MoodMessages';
 import Reasons from './components/Reasons';
+import FlipCards from './components/FlipCards';
+import LoveQuiz from './components/LoveQuiz';
 import BirthdaySpecial from './components/BirthdaySpecial';
+import WishWall from './components/WishWall';
 import Quotes from './components/Quotes';
 import FinalSection from './components/FinalSection';
 
@@ -50,7 +53,10 @@ export default function App() {
           <LoveLetter />
           <MoodMessages />
           <Reasons />
+          <FlipCards />
+          <LoveQuiz />
           <BirthdaySpecial />
+          <WishWall />
           <Quotes />
           <FinalSection />
 
