@@ -20,12 +20,12 @@ const events = [
   {
     emoji: '✨', title: 'Classroom Memories', date: '',
     desc: 'The little moments slowly became special.',
-    img: '/assets/images/saree-look.jpg',
+    img: '/assets/images/classroom.jpg',
   },
   {
     emoji: '🎂', title: 'Today', date: 'Now',
     desc: 'Celebrating the most precious person.',
-    img: '/assets/images/together.png',
+    img: '/assets/images/today.png',
   },
 ];
 
