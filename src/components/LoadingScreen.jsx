@@ -25,7 +25,7 @@ export default function LoadingScreen({ onComplete }) {
           <div className="loading-text" style={{ marginBottom: '0.5rem' }}>
             Happy Birthday Spoorthi 🎂
           </div>
-          <div className="loading-sub">Made with love by Papu</div>
+          <div className="loading-sub">Made with love by vinayyyy</div>
         </div>
       )}
     </div>

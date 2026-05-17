@@ -52,7 +52,7 @@ export default function FinalSection() {
       <div className="final-typewriter">
         {typed}<span className="typewriter" />
       </div>
-      <div className="final-sign">— Papu 🫶</div>
+      <div className="final-sign">— vinayyyy 🫶</div>
     </section>
   );
 }

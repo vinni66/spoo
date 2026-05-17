@@ -39,7 +39,7 @@ export default function LoveLetter() {
 
   return (
     <section className="love-letter-section" id="love-letter" ref={sectionRef}>
-      <h2 className="section-title">A Letter From Papu 💌</h2>
+      <h2 className="section-title">A Letter From vinayyyy 💌</h2>
       <div className="love-letter glass-card">
         <div className="from">Dear Spoorthi,</div>
         <p>
