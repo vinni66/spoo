@@ -11,7 +11,7 @@ export default function MusicToggle() {
   const [showName, setShowName] = useState(false);
   const audioRef = useRef(null);
 
-  // Create audio and force autoplay immediately
+  // Play immediately on mount — this component only mounts after user taps "Enter"
   useEffect(() => {
     const audio = new Audio(songs[0].src);
     audio.loop = true;
@@ -19,33 +19,14 @@ export default function MusicToggle() {
     audio.currentTime = songs[0].startAt;
     audioRef.current = audio;
 
-    // Try autoplay immediately
-    const tryPlay = () => {
-      audio.play().then(() => {
-        setPlaying(true);
-        setShowName(true);
-        setTimeout(() => setShowName(false), 3000);
-      }).catch(() => {});
-    };
+    // Play right away — user already tapped so browser allows it
+    audio.play().then(() => {
+      setPlaying(true);
+      setShowName(true);
+      setTimeout(() => setShowName(false), 3000);
+    }).catch(() => {});
 
-    // Attempt right away
-    tryPlay();
-
-    // Also retry on any user interaction (browsers require it)
-    const retryPlay = () => {
-      if (!audioRef.current.paused) return;
-      tryPlay();
-    };
-    document.addEventListener('click', retryPlay);
-    document.addEventListener('touchstart', retryPlay);
-    document.addEventListener('scroll', retryPlay);
-
-    return () => {
-      audio.pause(); audio.src = '';
-      document.removeEventListener('click', retryPlay);
-      document.removeEventListener('touchstart', retryPlay);
-      document.removeEventListener('scroll', retryPlay);
-    };
+    return () => { audio.pause(); audio.src = ''; };
   }, []);
 
   const togglePlay = useCallback((e) => {
