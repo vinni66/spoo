@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 
-/* ===== Music Toggle with 2 songs ===== */
 const songs = [
   { src: '/assets/music/endendigu.mp3', name: 'Endendigu', startAt: 0 },
   { src: '/assets/music/muddu-magale.mp3', name: 'Muddu Magale', startAt: 16 },
@@ -11,9 +10,8 @@ export default function MusicToggle() {
   const [songIdx, setSongIdx] = useState(0);
   const [showName, setShowName] = useState(false);
   const audioRef = useRef(null);
-  const hasInteracted = useRef(false);
 
-  // Create audio on mount
+  // Create audio and force autoplay immediately
   useEffect(() => {
     const audio = new Audio(songs[0].src);
     audio.loop = true;
@@ -21,28 +19,32 @@ export default function MusicToggle() {
     audio.currentTime = songs[0].startAt;
     audioRef.current = audio;
 
-    // When one song ends, it loops (already set)
-    return () => { audio.pause(); audio.src = ''; };
-  }, []);
-
-  // Autoplay on first user interaction (browsers block autoplay without interaction)
-  useEffect(() => {
-    const tryAutoplay = () => {
-      if (!hasInteracted.current && audioRef.current) {
-        hasInteracted.current = true;
-        audioRef.current.play().then(() => {
-          setPlaying(true);
-          setShowName(true);
-          setTimeout(() => setShowName(false), 3000);
-        }).catch(() => {});
-      }
+    // Try autoplay immediately
+    const tryPlay = () => {
+      audio.play().then(() => {
+        setPlaying(true);
+        setShowName(true);
+        setTimeout(() => setShowName(false), 3000);
+      }).catch(() => {});
     };
-    // Listen for any user interaction
-    window.addEventListener('click', tryAutoplay, { once: true });
-    window.addEventListener('touchstart', tryAutoplay, { once: true });
+
+    // Attempt right away
+    tryPlay();
+
+    // Also retry on any user interaction (browsers require it)
+    const retryPlay = () => {
+      if (!audioRef.current.paused) return;
+      tryPlay();
+    };
+    document.addEventListener('click', retryPlay);
+    document.addEventListener('touchstart', retryPlay);
+    document.addEventListener('scroll', retryPlay);
+
     return () => {
-      window.removeEventListener('click', tryAutoplay);
-      window.removeEventListener('touchstart', tryAutoplay);
+      audio.pause(); audio.src = '';
+      document.removeEventListener('click', retryPlay);
+      document.removeEventListener('touchstart', retryPlay);
+      document.removeEventListener('scroll', retryPlay);
     };
   }, []);
 
