@@ -99,9 +99,12 @@ button { cursor: pointer; border: none; outline: none; font-family: var(--font-b
   100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
 }
 
-/* ===== MUSIC TOGGLE ===== */
-.music-toggle {
+/* ===== MUSIC CONTROLS ===== */
+.music-controls {
   position: fixed; top: 1rem; right: 1rem; z-index: 1000;
+  display: flex; flex-direction: column; gap: 0.5rem;
+}
+.music-toggle, .music-switch {
   width: 44px; height: 44px; border-radius: 50%;
   background: var(--glass-bg); backdrop-filter: blur(10px);
   border: 1px solid var(--glass-border);
@@ -109,7 +112,8 @@ button { cursor: pointer; border: none; outline: none; font-family: var(--font-b
   font-size: 1.2rem; color: var(--pink);
   transition: var(--transition);
 }
-.music-toggle:hover { background: rgba(248,180,200,0.2); transform: scale(1.1); }
+.music-toggle:hover, .music-switch:hover { background: rgba(248,180,200,0.2); transform: scale(1.1); }
+.music-switch { font-size: 0.9rem; width: 36px; height: 36px; align-self: center; }
 .music-bars { display: flex; gap: 2px; align-items: flex-end; height: 16px; }
 .music-bars span {
   width: 3px; background: var(--pink); border-radius: 2px;
@@ -122,6 +126,15 @@ button { cursor: pointer; border: none; outline: none; font-family: var(--font-b
 .music-bars span:nth-child(4) { height: 12px; animation-delay: 0.1s; }
 @keyframes musicBar {
   0% { height: 4px; } 100% { height: 16px; }
+}
+.music-name {
+  position: fixed; top: 1rem; right: 5.5rem; z-index: 1000;
+  padding: 0.5rem 1rem; border-radius: 20px;
+  background: var(--glass-bg); backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  font-size: 0.8rem; color: var(--pink-light);
+  animation: fadeInUp 0.5s ease;
+  white-space: nowrap;
 }
 
 /* ===== SECTION COMMON ===== */
