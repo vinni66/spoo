@@ -5,6 +5,8 @@ const photos = [
   { src: '/assets/images/first-meet.jpg', caption: 'Where it all began 👀', polaroid: true },
   { src: '/assets/images/first-selfie.jpg', caption: 'Our first selfie 💕', polaroid: false },
   { src: '/assets/images/holding-hands.jpg', caption: 'First time holding your hand 🤝', polaroid: true },
+  { src: '/assets/images/angry-face.jpg', caption: 'Even your anger looks cute 😤💖', polaroid: false },
+  { src: '/assets/images/saree-look.jpg', caption: 'That saree look though 🔥✨', polaroid: true },
   { src: '/assets/images/together.png', caption: 'Us, always 💖', polaroid: false },
   { src: '/assets/images/together-us.png', caption: 'Together forever ✨', polaroid: true },
 ];
