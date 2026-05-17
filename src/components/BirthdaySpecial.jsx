@@ -24,7 +24,7 @@ export default function BirthdaySpecial() {
 
   return (
     <section className="birthday-section" id="birthday">
-      <h2 className="section-title">Your Special Day 🎂</h2>
+      <h2 className="section-title">Today is all about my Spoo 🎂💖</h2>
 
       {/* Floating Balloons */}
       <div className="balloons">
@@ -57,7 +57,7 @@ export default function BirthdaySpecial() {
       <div className={`wish-modal ${showWish ? 'active' : ''}`} onClick={() => setShowWish(false)}>
         <div className="wish-modal-content glass-card" onClick={e => e.stopPropagation()}>
           <span className="emoji">🌟</span>
-          <p>I just wish your smile always stays the same 💖</p>
+          <p>Ninna smile ivattu extra mandatory 😭💕<br/>Happy Birthday to my comfort person 🤍</p>
           <button className="wish-modal-close" onClick={() => setShowWish(false)}>Close 💕</button>
         </div>
       </div>

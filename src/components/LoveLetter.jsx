@@ -1,13 +1,18 @@
 import { useState, useEffect, useRef } from 'react';
 
-/* ===== Love Letter with Typewriter Effect ===== */
-const fullText = `You made ordinary days feel special without even trying. Your smile, your presence, your small habits — everything slowly became important to me.
+const fullText = `Honestly, ninna life-ge banda mele tumba things change aaythu. Earlier normal anso moments kooda ivaga special ansutte. Ninna message, ninna smile, ninna small reactions — ivella slowly nanna daily happiness aagbitu 🙂
 
-I don't know what the future looks like, but I know you became one of my happiest parts. You turned simple moments into memories I keep replaying.
+Naanu perfect person alla, words kooda always correct aagi baralla. Aadru ninna mele iruva care mattu feeling tumba genuine. Ninna jothe iruvaga calm ansutte, safe ansutte, happy ansutte 🤍
 
-Some feelings don't need big words. You just feel them quietly, and they stay. That's what you are to me — something quiet, something real, something I never want to lose.
+Still remember aa small-small moments… class alli nododu, unnecessary smile madodu, wait madodu 😭💕
+Slow aagi start aada ee feeling ivaga nanna favorite part of life aagide.
 
-Happy Birthday, Spoorthi. You deserve every beautiful thing in this world. 💖`;
+Ninna smile yavaglu hinge irali. Stress kammi, happiness jasthi, and heart full peaceful aagirali ✨
+Birthday today nindhe, aadre happy feeling swalpa nangu ide because ninna life alli irakke chance sikthu 💖
+
+Thanks for being my Spoo, my Dummu, my Putta, my favorite person 🫶
+
+Happy Birthday once again 🎂💛`;
 
 export default function LoveLetter() {
   const [displayed, setDisplayed] = useState('');
@@ -33,7 +38,7 @@ export default function LoveLetter() {
       } else {
         clearInterval(interval);
       }
-    }, 30);
+    }, 25);
     return () => clearInterval(interval);
   }, [started]);
 
@@ -41,11 +46,14 @@ export default function LoveLetter() {
     <section className="love-letter-section" id="love-letter" ref={sectionRef}>
       <h2 className="section-title">A Letter From vinayyyy 💌</h2>
       <div className="love-letter glass-card">
-        <div className="from">Dear Spoorthi,</div>
+        <div className="from">Dear Spoorthi 💖,</div>
         <p>
           {displayed}
           {displayed.length < fullText.length && <span className="typewriter" />}
         </p>
+        {displayed.length >= fullText.length && (
+          <div className="letter-sign">— Vinayyyyy 🫶</div>
+        )}
       </div>
     </section>
   );

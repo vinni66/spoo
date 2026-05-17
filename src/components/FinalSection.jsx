@@ -44,15 +44,16 @@ export default function FinalSection() {
         ))}
       </div>
 
-      <div className="final-text">Happy Birthday, Spoorthi 💖</div>
+      <div className="final-text">Happy Birthday Spoorthi 💖</div>
       <div className="final-message">
-        No matter how many birthdays come,<br />
-        I think you'll always stay special to me.
+        Yestu birthdays bandru,<br />
+        ninu special aagirtiya anisutte 🙂<br /><br />
+        Thanks for becoming one of my happiest feelings 🤍
       </div>
       <div className="final-typewriter">
         {typed}<span className="typewriter" />
       </div>
-      <div className="final-sign">— vinayyyy 🫶</div>
+      <div className="final-sign">— Vinayyyyy 🫶</div>
     </section>
   );
 }

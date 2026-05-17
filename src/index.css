@@ -354,12 +354,19 @@ section {
   margin-bottom: 1.5rem;
 }
 .love-letter p {
-  font-family: var(--font-heading);
-  font-size: clamp(1rem, 2.5vw, 1.15rem);
+  font-family: var(--font-body);
+  font-size: clamp(0.95rem, 2.5vw, 1.05rem);
   color: rgba(255,255,255,0.8);
-  line-height: 1.9; font-style: italic;
+  line-height: 1.9; text-align: left;
+  white-space: pre-line;
 }
-.typewriter { border-right: 2px solid var(--pink); padding-right: 4px; }
+.letter-sign {
+  font-family: var(--font-display);
+  font-size: 1.3rem; color: var(--pink);
+  margin-top: 1.5rem; text-align: right;
+}
+.typewriter { border-right: 2px solid var(--pink); padding-right: 4px; animation: blink 0.8s infinite; }
+@keyframes blink { 0%, 100% { border-color: var(--pink); } 50% { border-color: transparent; } }
 
 /* ===== REASONS CARDS ===== */
 .reasons-grid {

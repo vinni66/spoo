@@ -1,9 +1,13 @@
 /* ===== Memory Quotes Section ===== */
 const quotes = [
-  'Some people arrive slowly and become important suddenly.',
-  'You became my favorite notification.',
-  'Love started quietly and stayed beautifully.',
-  'The best feelings are usually simple.',
+  'Ninna nodidmele normal days kooda special ansutte 💖',
+  'Ninna message bandre mood automatic better aagutte 🙂',
+  'Slow aagi bandu, tumba important aagbitte ninu ✨',
+  'Ninna jothe iruvudu peaceful feeling 🤍',
+  'Ninna smile ge addicted aagbitini anisutte 😭💛',
+  'Love andre enu anta gothiralilla… ninna nodida mele gothaaythu 💕',
+  'Ninna hesaru nodidre kooda smile barutte 🫶',
+  'You became my favorite habit 🌸',
 ];
 
 export default function Quotes() {

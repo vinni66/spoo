@@ -1,12 +1,14 @@
 import { useEffect, useRef } from 'react';
 
 const memories = [
-  { text: "Still remember waiting just to see you in class 🙂", icon: "📚" },
-  { text: "The way you say 'hmmm' when you're annoyed 😤", icon: "😤" },
-  { text: "Walking slowly so we could talk a little longer", icon: "🚶" },
-  { text: "Your laugh when you try to act serious", icon: "😂" },
-  { text: "Those random stares when you think I'm not looking 👀", icon: "👀" },
-  { text: "The day you finally said yes and I couldn't stop smiling", icon: "💖" },
+  { text: "Still remember aa first look 👀", icon: "👀" },
+  { text: "Proposal time alli heart full fast beat aagittu 😭", icon: "❤️" },
+  { text: "May 18 ❤️ forever special", icon: "📅" },
+  { text: "Classroom moments >>> everything", icon: "📚" },
+  { text: "Ninna nodakke unnecessary rounds hakiddu worth it 😂", icon: "🚶" },
+  { text: "Small conversations became best memories 💕", icon: "💬" },
+  { text: "Eye contact alli half story aagittu 😭", icon: "👁️" },
+  { text: "Aa smile inda problem start aaythu 💘", icon: "😊" },
 ];
 
 export default function TinyMemories() {

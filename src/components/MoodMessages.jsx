@@ -1,12 +1,14 @@
 import { useEffect, useRef } from 'react';
 
 const moods = [
-  { mood: "When I miss you", msg: "I just scroll our chats and smile like an idiot 🙂", color: "#f8b4c8" },
-  { mood: "When you're angry", msg: "Even your anger looks cute, Dummu 😤💖", color: "#ff6b9d" },
-  { mood: "When you smile", msg: "My whole day just fixes itself ✨", color: "#f0c27f" },
-  { mood: "When we fight", msg: "I already know I'll text first anyway 😅", color: "#e891a8" },
-  { mood: "When you're silent", msg: "Even that silence feels comfortable with you 🤍", color: "#fde4ec" },
-  { mood: "Late night talks", msg: "Those 2 AM conversations > everything else 🌙", color: "#c8a8e8" },
+  { mood: "When I miss you", msg: "Ninna message scroll maadi smile maadtini 🙂", color: "#f8b4c8" },
+  { mood: "When you're angry", msg: "Dummu, swalpa care togo 😤💖", color: "#ff6b9d" },
+  { mood: "When you smile", msg: "Ninna smile ge addicted aagbitini 😭💛", color: "#f0c27f" },
+  { mood: "When we fight", msg: "Naane text maadtini anta gothu already 😅", color: "#e891a8" },
+  { mood: "When you're silent", msg: "Ninna jothe calm aagi irbahudu anisutte ✨", color: "#fde4ec" },
+  { mood: "Late night talks", msg: "2 AM conversations >>> everything else 🌙", color: "#c8a8e8" },
+  { mood: "Complicated days", msg: "Simple happiness = ninu 💛", color: "#f8b4c8" },
+  { mood: "Always", msg: "Ninna presence tumba safe feeling kodutte 🤍", color: "#fde4ec" },
 ];
 
 export default function MoodMessages() {

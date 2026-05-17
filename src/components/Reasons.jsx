@@ -1,13 +1,12 @@
 import { useEffect, useRef } from 'react';
 
-/* ===== Reasons I Like You Section ===== */
 const reasons = [
-  { emoji: '😊', text: 'Your smile fixes my mood.' },
-  { emoji: '✨', text: 'You make normal moments special.' },
-  { emoji: '☮️', text: 'Talking to you feels peaceful.' },
+  { emoji: '😊', text: 'Ninna smile fixes my mood.' },
+  { emoji: '✨', text: 'Ninna jothe iruvudu peaceful feeling.' },
   { emoji: '🏠', text: 'You became my comfort person.' },
-  { emoji: '💖', text: 'Your presence feels like home.' },
+  { emoji: '💖', text: 'Ninna presence feels like home.' },
   { emoji: '🤫', text: 'Even your silence feels nice.' },
+  { emoji: '🌸', text: 'Ninna jothe irbeku anta reason bekagilla 💖' },
 ];
 
 export default function Reasons() {

@@ -11,21 +11,18 @@ export default function Hero() {
 
   return (
     <section className="hero" id="hero">
-      {/* Glowing background orbs */}
       <div className="hero-glow hero-glow-1" />
       <div className="hero-glow hero-glow-2" />
 
       <div className="hero-badge">🎂 May 18 — Her Special Day</div>
-      <h1 className="hero-title anim-text">Happy Birthday, Spoorthi 💕</h1>
-      <p className="hero-sub anim-text-delay">Every moment with you became a beautiful memory.</p>
-      <p className="hero-nickname anim-text-delay2">— For my Spoo, my Muddu, my everything 💖</p>
+      <h1 className="hero-title anim-text">Happy Birthday, Spoorthi 💖</h1>
+      <p className="hero-sub anim-text-delay">To the girl who changed normal days into favorite memories 💕</p>
+      <p className="hero-nickname anim-text-delay2">— For my Spoo, my Dummu, my Putta, my everything 🫶</p>
 
-      {/* Featured Big Photo */}
       <div className="hero-featured">
         <img src="/assets/images/together.png" alt="Us together" />
       </div>
 
-      {/* Photo Carousel */}
       <div className="carousel-section">
         <div className="carousel-track" ref={carouselRef}>
           {images.map((img, i) => (

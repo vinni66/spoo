@@ -64,7 +64,7 @@ export default function App() {
             <div className="wish-modal active" onClick={() => setSurpriseMsg(false)}>
               <div className="wish-modal-content glass-card" onClick={e => e.stopPropagation()}>
                 <span className="emoji">💕</span>
-                <p>Thank you for being my Spoo 💕</p>
+                <p>Dummu, ninu tumba special 💛<br/>Tap madidya 😭💖</p>
                 <button className="wish-modal-close" onClick={() => setSurpriseMsg(false)}>Close 🤍</button>
               </div>
             </div>
