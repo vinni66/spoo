@@ -1,4 +1,5 @@
 import { useState, useCallback, useEffect } from 'react';
+import Countdown from './components/Countdown';
 import LoadingScreen from './components/LoadingScreen';
 import Particles from './components/Particles';
 import MusicToggle from './components/MusicToggle';
@@ -17,10 +18,12 @@ import Quotes from './components/Quotes';
 import FinalSection from './components/FinalSection';
 
 export default function App() {
+  const [countdownDone, setCountdownDone] = useState(false);
   const [loaded, setLoaded] = useState(false);
   const [surpriseMsg, setSurpriseMsg] = useState(false);
   const [hiddenMsg, setHiddenMsg] = useState(false);
 
+  const handleCountdownComplete = useCallback(() => setCountdownDone(true), []);
   const handleLoadComplete = useCallback(() => setLoaded(true), []);
 
   // Touch/click hearts
@@ -40,7 +43,8 @@ export default function App() {
 
   return (
     <>
-      <LoadingScreen onComplete={handleLoadComplete} />
+      {!countdownDone && <Countdown onComplete={handleCountdownComplete} />}
+      {countdownDone && !loaded && <LoadingScreen onComplete={handleLoadComplete} />}
       {loaded && (
         <>
           <Particles />
