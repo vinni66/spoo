@@ -7,7 +7,7 @@ export default function Hero() {
     { src: '/assets/images/first-meet.jpg', alt: 'Our first meet' },
     { src: '/assets/images/first-selfie.jpg', alt: 'Our first selfie' },
     { src: '/assets/images/holding-hands.jpg', alt: 'Holding hands' },
-    { src: '/assets/images/together.png', alt: 'Together' },
+    { src: '/assets/images/together-us.png', alt: 'Together us' },
   ];
 
   return (
@@ -15,6 +15,11 @@ export default function Hero() {
       <div className="hero-badge">🎂 May 18 — Her Special Day</div>
       <h1 className="hero-title">Happy Birthday, Spoorthi 💕</h1>
       <p className="hero-sub">Every moment with you became a beautiful memory.</p>
+
+      {/* Featured Big Photo */}
+      <div className="hero-featured">
+        <img src="/assets/images/together.png" alt="Us together" />
+      </div>
 
       {/* Photo Carousel */}
       <div className="carousel-section">
@@ -35,3 +40,4 @@ export default function Hero() {
     </section>
   );
 }
+
