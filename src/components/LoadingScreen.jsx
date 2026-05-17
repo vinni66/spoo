@@ -10,8 +10,9 @@ export default function LoadingScreen({ onComplete }) {
   }, []);
 
   const handleEnter = () => {
-    // This click event starts the music (browser allows audio after user gesture)
-    onComplete();
+    setPhase(3);
+    // Small delay for fade-out animation, then load the site + start music
+    setTimeout(() => onComplete(), 800);
   };
 
   return (
