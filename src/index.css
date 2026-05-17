@@ -244,32 +244,47 @@ section {
 .timeline { position: relative; max-width: 600px; width: 100%; margin: 0 auto; }
 .timeline::before {
   content: ''; position: absolute;
-  left: 20px; top: 0; bottom: 0; width: 2px;
-  background: linear-gradient(to bottom, transparent, var(--pink), var(--pink), transparent);
+  left: 22px; top: 0; bottom: 0; width: 3px;
+  background: linear-gradient(to bottom, transparent, var(--pink), var(--rose), var(--pink), transparent);
+  border-radius: 3px;
 }
 .timeline-item {
-  position: relative; padding-left: 60px; margin-bottom: 3rem;
-  opacity: 0; transform: translateX(-20px);
-  transition: all 0.6s ease;
+  position: relative; padding-left: 65px; margin-bottom: 2.5rem;
+  opacity: 0; transform: translateX(-30px);
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .timeline-item.visible { opacity: 1; transform: translateX(0); }
 .timeline-dot {
-  position: absolute; left: 12px; top: 0.5rem;
-  width: 18px; height: 18px; border-radius: 50%;
-  background: var(--pink); border: 3px solid var(--black);
-  box-shadow: 0 0 15px rgba(248,180,200,0.5);
+  position: absolute; left: 8px; top: 0.5rem;
+  width: 32px; height: 32px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--pink), var(--rose));
+  border: 3px solid var(--black);
+  box-shadow: 0 0 20px rgba(248,180,200,0.5);
   z-index: 2;
+  display: flex; align-items: center; justify-content: center;
 }
+.timeline-dot-emoji { font-size: 0.8rem; line-height: 1; }
 .timeline-date {
-  font-family: var(--font-body); font-size: 0.8rem;
+  font-family: var(--font-body); font-size: 0.75rem;
   color: var(--pink); font-weight: 600;
-  margin-bottom: 0.5rem; letter-spacing: 1px;
+  margin-bottom: 0.5rem; letter-spacing: 2px;
+  text-transform: uppercase;
 }
-.timeline-card { padding: 1.5rem; }
+.timeline-card { padding: 0; overflow: hidden; }
+.timeline-img {
+  width: 100%; height: 180px; overflow: hidden;
+  border-radius: 20px 20px 0 0;
+}
+.timeline-img img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.timeline-card:hover .timeline-img img { transform: scale(1.05); }
+.timeline-card-content { padding: 1.2rem 1.5rem 1.5rem; }
 .timeline-card h3 {
   font-family: var(--font-display);
   font-size: 1.4rem; color: var(--pink-light);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 .timeline-card p { font-size: 0.95rem; color: rgba(255,255,255,0.7); line-height: 1.6; }
 
