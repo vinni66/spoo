@@ -4,17 +4,19 @@ import Particles from './components/Particles';
 import MusicToggle from './components/MusicToggle';
 import Hero from './components/Hero';
 import Timeline from './components/Timeline';
+import TinyMemories from './components/TinyMemories';
 import Gallery from './components/Gallery';
 import LoveLetter from './components/LoveLetter';
+import MoodMessages from './components/MoodMessages';
 import Reasons from './components/Reasons';
 import BirthdaySpecial from './components/BirthdaySpecial';
 import Quotes from './components/Quotes';
 import FinalSection from './components/FinalSection';
 
-/* ===== Main App ===== */
 export default function App() {
   const [loaded, setLoaded] = useState(false);
   const [surpriseMsg, setSurpriseMsg] = useState(false);
+  const [hiddenMsg, setHiddenMsg] = useState(false);
 
   const handleLoadComplete = useCallback(() => setLoaded(true), []);
 
@@ -36,7 +38,6 @@ export default function App() {
   return (
     <>
       <LoadingScreen onComplete={handleLoadComplete} />
-
       {loaded && (
         <>
           <Particles />
@@ -44,31 +45,37 @@ export default function App() {
 
           <Hero />
           <Timeline />
+          <TinyMemories />
           <Gallery />
           <LoveLetter />
+          <MoodMessages />
           <Reasons />
           <BirthdaySpecial />
           <Quotes />
           <FinalSection />
 
-          {/* Hidden surprise button */}
-          <button
-            className="surprise-btn"
-            onClick={(e) => { e.stopPropagation(); setSurpriseMsg(true); }}
-            title="?"
-          >
-            ?
-          </button>
+          {/* Hidden surprise — bottom left */}
+          <button className="surprise-btn" onClick={(e) => { e.stopPropagation(); setSurpriseMsg(true); }} title="?">?</button>
 
-          {/* Surprise modal */}
+          {/* Hidden heart — top left, very subtle */}
+          <button className="hidden-heart-btn" onClick={(e) => { e.stopPropagation(); setHiddenMsg(true); }}>💗</button>
+
           {surpriseMsg && (
             <div className="wish-modal active" onClick={() => setSurpriseMsg(false)}>
               <div className="wish-modal-content glass-card" onClick={e => e.stopPropagation()}>
                 <span className="emoji">💕</span>
                 <p>Thank you for being my Spoo 💕</p>
-                <button className="wish-modal-close" onClick={() => setSurpriseMsg(false)}>
-                  Close 🤍
-                </button>
+                <button className="wish-modal-close" onClick={() => setSurpriseMsg(false)}>Close 🤍</button>
+              </div>
+            </div>
+          )}
+
+          {hiddenMsg && (
+            <div className="wish-modal active" onClick={() => setHiddenMsg(false)}>
+              <div className="wish-modal-content glass-card" onClick={e => e.stopPropagation()}>
+                <span className="emoji">💖</span>
+                <p>Vinayyyyy loves Spoorthi endlessly 💕</p>
+                <button className="wish-modal-close" onClick={() => setHiddenMsg(false)}>Close 🤍</button>
               </div>
             </div>
           )}

@@ -1,6 +1,5 @@
 import { useRef } from 'react';
 
-/* ===== Hero Section ===== */
 export default function Hero() {
   const carouselRef = useRef(null);
   const images = [
@@ -12,9 +11,14 @@ export default function Hero() {
 
   return (
     <section className="hero" id="hero">
+      {/* Glowing background orbs */}
+      <div className="hero-glow hero-glow-1" />
+      <div className="hero-glow hero-glow-2" />
+
       <div className="hero-badge">🎂 May 18 — Her Special Day</div>
-      <h1 className="hero-title">Happy Birthday, Spoorthi 💕</h1>
-      <p className="hero-sub">Every moment with you became a beautiful memory.</p>
+      <h1 className="hero-title anim-text">Happy Birthday, Spoorthi 💕</h1>
+      <p className="hero-sub anim-text-delay">Every moment with you became a beautiful memory.</p>
+      <p className="hero-nickname anim-text-delay2">— For my Spoo, my Muddu, my everything 💖</p>
 
       {/* Featured Big Photo */}
       <div className="hero-featured">
@@ -32,7 +36,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
       <div className="scroll-indicator">
         <div className="scroll-mouse" />
         <span>scroll down</span>
@@ -40,4 +43,3 @@ export default function Hero() {
     </section>
   );
 }
-
