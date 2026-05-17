@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 
 const songs = [
-  { src: '/assets/music/endendigu.mp3', name: 'Endendigu', startAt: 0 },
   { src: '/assets/music/muddu-magale.mp3', name: 'Muddu Magale', startAt: 16 },
+  { src: '/assets/music/endendigu.mp3', name: 'Endendigu', startAt: 0 },
 ];
 
 export default function MusicToggle() {
